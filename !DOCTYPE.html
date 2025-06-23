@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Página Personal</title>
+  <style>
+    :root {
+      --color-primario: #0e76a8;
+      --color-fondo: #f4f4f4;
+      --color-texto: #333;
+      --ancho-max: 800px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+    }
+
+    header {
+      background-color: var(--color-primario);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .container {
+      max-width: var(--ancho-max);
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .sobre-mi {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .sobre-mi img {
+      max-width: 200px;
+      border-radius: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: var(--color-primario);
+      color: white;
+      border: none;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #095b86;
+    }
+
+    @media (max-width: 600px) {
+      .sobre-mi {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .sobre-mi img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenid@ a mi página web</h1>
+  </header>
+
+  <div class="container">
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <div class="sobre-mi">
+        <img src="https://via.placeholder.com/200" alt="Mi foto" />
+        <p>
+          ¡Hola! Soy [Tu nombre], apasionad@ por el diseño, la tecnología y la creatividad. 
+          Me encanta aprender cosas nuevas y compartir conocimientos con los demás.
+        </p>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form>
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="correo" placeholder="Tu correo electrónico" required />
+        <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
